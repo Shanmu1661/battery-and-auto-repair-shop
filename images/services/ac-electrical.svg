@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgAc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgAc)"/>
+  <!-- AC Snow Flakes & Cooling waves -->
+  <circle cx="400" cy="220" r="130" fill="#0284c7" opacity="0.1"/>
+  <!-- Snowflake icon representation -->
+  <path d="M 400 130 V 310 M 310 220 H 490" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 336 156 L 464 284 M 464 156 L 336 284" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="400" cy="220" r="40" fill="#0369a1" stroke="#bae6fd" stroke-width="4"/>
+  <!-- Compressor Clutch & Electrical Coil -->
+  <path d="M 385 205 L 415 235 M 415 205 L 385 235" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Digital Thermometer / Gauge -->
+  <rect x="250" y="330" width="300" height="24" rx="12" fill="#1e293b"/>
+  <rect x="252" y="332" width="180" height="20" rx="10" fill="#38bdf8"/>
+  <text x="400" y="415" font-family="sans-serif" font-weight="900" font-size="24" fill="#38bdf8" text-anchor="middle">AC ELECTRICAL &amp; CLIMATE CONTROL</text>
+  <text x="400" y="445" font-family="sans-serif" font-weight="500" font-size="15" fill="#94a3b8" text-anchor="middle">Compressor Relay • Blower Resistor • Evaporator Sensors • AC Leak Diagnosis</text>
+</svg>

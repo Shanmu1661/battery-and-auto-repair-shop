@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <defs>
+    <linearGradient id="amaronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="70" rx="10" fill="url(#amaronGrad)"/>
+  <rect x="8" y="8" width="54" height="54" rx="8" fill="#ffffff"/>
+  <path d="M 35 15 L 20 48 L 29 48 L 32 40 L 38 40 L 41 48 L 50 48 Z M 35 25 L 37 34 L 33 34 Z" fill="#15803d"/>
+  <text x="72" y="44" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="1.5">AMARON</text>
+  <text x="73" y="58" font-family="sans-serif" font-weight="600" font-size="9" fill="#86efac" letter-spacing="2">LASTS LONG. REALLY LONG.</text>
+</svg>

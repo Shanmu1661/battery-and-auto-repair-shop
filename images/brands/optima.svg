@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <defs>
+    <linearGradient id="optimaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="70" rx="10" fill="url(#optimaGrad)"/>
+  <circle cx="36" cy="35" r="20" fill="#dc2626"/>
+  <circle cx="36" cy="35" r="12" fill="#ffffff"/>
+  <circle cx="36" cy="35" r="6" fill="#0284c7"/>
+  <text x="68" y="44" font-family="'Arial Black', sans-serif" font-weight="900" font-size="26" fill="#ffffff" letter-spacing="1">OPTIMA</text>
+  <text x="70" y="58" font-family="sans-serif" font-weight="700" font-size="9" fill="#93c5fd" letter-spacing="1.5">HIGH-PERFORMANCE AGM</text>
+</svg>

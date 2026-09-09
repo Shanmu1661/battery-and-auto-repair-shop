@@ -1,0 +1,794 @@
+/* ==========================================================================
+   VoltFix Pro - Battery & Auto Electrical Repair Shop HTML Template
+   Main Custom Stylesheet (style.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Root Variables & Typography
+   -------------------------------------------------------------------------- */
+:root {
+  --primary: #f59e0b; /* Amber / Electric Glow */
+  --primary-hover: #d97706;
+  --secondary: #0ea5e9; /* Electric Cyan / Blue */
+  --secondary-hover: #0284c7;
+  --dark-bg: #0b0f19;
+  --dark-card: #111827;
+  --dark-border: #1f2937;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & smooth transitions */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   2. Dark Mode Refinements
+   -------------------------------------------------------------------------- */
+.dark body {
+  background-color: #0b0f19;
+  color: #f3f4f6;
+}
+
+.dark .bg-surface {
+  background-color: #111827;
+}
+
+.dark .bg-surface-elevated {
+  background-color: #1a2234;
+}
+
+.dark .border-color-subtle {
+  border-color: #242e42;
+}
+
+.dark .text-muted-custom {
+  color: #9ca3af;
+}
+
+/* --------------------------------------------------------------------------
+   2.1. Dark Mode Header, Nav Links & Action Buttons Visibility
+   -------------------------------------------------------------------------- */
+html.dark header {
+  background-color: rgba(11, 15, 25, 0.96) !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+/* Desktop Navigation Links in Dark Mode */
+html.dark header nav a,
+html.dark header nav button {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+html.dark header nav a:hover,
+html.dark header nav button:hover {
+  color: #fbbf24 !important; /* amber-400 */
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Active navigation link in dark mode */
+html.dark header nav a.font-bold,
+html.dark header nav button.font-bold,
+html.dark header nav a.text-amber-600,
+html.dark header nav button.text-amber-600 {
+  color: #fbbf24 !important;
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+
+/* Navbar Action Link Buttons in Dark Mode (Login, Book Diagnostic, RTL, Theme) */
+html.dark a[href*="login.html"] {
+  background-color: rgba(30, 41, 59, 0.90) !important;
+  border: 1px solid rgba(245, 158, 11, 0.50) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+html.dark a[href*="login.html"] i {
+  color: #f59e0b !important;
+}
+
+html.dark a[href*="login.html"]:hover {
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  border-color: #f59e0b !important;
+  color: #fbbf24 !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+}
+
+html.dark .rtl-toggle-btn {
+  background-color: rgba(30, 41, 59, 0.90) !important;
+  border: 1px solid rgba(100, 116, 139, 0.6) !important;
+  color: #f8fafc !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .rtl-toggle-btn:hover {
+  background-color: rgba(51, 65, 85, 1) !important;
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  color: #ffffff !important;
+}
+
+/* Theme Toggle Button in Dark Mode */
+html.dark .theme-toggle-btn {
+  background-color: rgba(30, 41, 59, 0.95) !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .theme-toggle-btn .theme-icon,
+html.dark .theme-toggle-btn i {
+  color: #fbbf24 !important; /* Radiant Amber-400 */
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.7));
+  font-size: 0.95rem !important;
+  display: inline-block !important;
+}
+
+html.dark .theme-toggle-btn:hover {
+  background-color: rgba(51, 65, 85, 1) !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
+}
+
+html.dark .theme-toggle-btn:hover .theme-icon {
+  color: #fef08a !important;
+}
+
+html.dark header a[href*="contact.html#booking"] {
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+}
+
+/* Dropdown menus in dark mode */
+html.dark .dropdown-menu-custom {
+  background-color: #111827 !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+html.dark .dropdown-menu-custom a {
+  color: #e2e8f0 !important;
+}
+
+html.dark .dropdown-menu-custom a:hover {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  color: #fbbf24 !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. RTL (Right-to-Left) Styles & Overrides
+   -------------------------------------------------------------------------- */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Tajawal', 'Inter', system-ui, sans-serif;
+}
+
+/* BiDi Punctuation & English/Latin Text Protection in RTL Mode
+   Ensures neutral punctuation marks (., ,, /, !, ?, :, -, (), etc.) at sentence
+   and paragraph boundaries appear at their grammatically correct positions. */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] li,
+html[dir="rtl"] dt,
+html[dir="rtl"] dd,
+html[dir="rtl"] blockquote,
+html[dir="rtl"] figcaption,
+html[dir="rtl"] label,
+html[dir="rtl"] th,
+html[dir="rtl"] td,
+html[dir="rtl"] span,
+html[dir="rtl"] strong,
+html[dir="rtl"] b,
+html[dir="rtl"] em,
+html[dir="rtl"] small,
+html[dir="rtl"] .prose,
+html[dir="rtl"] .accordion-content,
+html[dir="rtl"] div {
+  unicode-bidi: plaintext;
+}
+
+/* Heading & Paragraph Alignment in RTL */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] li,
+html[dir="rtl"] dt,
+html[dir="rtl"] dd,
+html[dir="rtl"] blockquote,
+html[dir="rtl"] figcaption {
+  text-align: right;
+}
+
+/* Maintain intentional text alignments */
+html[dir="rtl"] .text-center,
+html[dir="rtl"] .text-center * {
+  text-align: center !important;
+}
+
+html[dir="rtl"] .text-right,
+html[dir="rtl"] .text-right * {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-left {
+  text-align: left !important;
+}
+
+/* Brand Logos in RTL: Maintain standard LTR brand reading */
+html[dir="rtl"] header a[href*="index.html"] span.text-2xl,
+html[dir="rtl"] footer a[href*="index.html"] span.text-2xl,
+html[dir="rtl"] a[href*="index.html"] span.text-2xl,
+html[dir="rtl"] a[href*="index.html"] span.text-2xl *,
+html[dir="rtl"] .brand-logo-text {
+  direction: ltr !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+}
+
+/* Badges, Numbers, Monetary Values, Phone Numbers, and Timers */
+html[dir="rtl"] span.absolute,
+html[dir="rtl"] [class*="badge"],
+html[dir="rtl"] .font-mono,
+html[dir="rtl"] a[href^="tel:"],
+html[dir="rtl"] [id^="estimator-"],
+html[dir="rtl"] .estimator-price,
+html[dir="rtl"] label span.text-xs.font-bold,
+html[dir="rtl"] .pricing-card-price,
+html[dir="rtl"] .rating-num,
+html[dir="rtl"] time {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* Rating score e.g. "4.9 / 5.0" & social trust proof */
+html[dir="rtl"] .hero-rating-proof,
+html[dir="rtl"] .hero-rating-proof * {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+html[dir="rtl"] .hero-rating-proof {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+html[dir="rtl"] div:has(> .fa-star) + span,
+html[dir="rtl"] div:has(> i.text-amber-500) + span,
+html[dir="rtl"] div:has(> .fa-star) + div,
+html[dir="rtl"] [dir="ltr"] {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+/* RTL Icon Flipping for directional chevrons & arrows */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* RTL Dropdown Alignment */
+html[dir="rtl"] .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .nav-dropdown {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .text-left-rtl-right {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .border-l-custom {
+  border-left-width: 0 !important;
+  border-right-width: 4px !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Custom Badges, Glows & Electric Effects
+   -------------------------------------------------------------------------- */
+.electric-glow-amber {
+  box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.45);
+}
+
+.electric-glow-blue {
+  box-shadow: 0 0 20px -3px rgba(14, 165, 233, 0.45);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Live Online Status Pulse */
+.pulse-indicator {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+}
+
+.pulse-indicator span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #10b981;
+  opacity: 0.75;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pulse-indicator span:nth-child(2) {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #059669;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Dropdown Navigation Styling
+   -------------------------------------------------------------------------- */
+.dropdown-group {
+  position: relative;
+}
+
+.dropdown-menu-custom {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.dropdown-group:hover .dropdown-menu-custom,
+.dropdown-group:focus-within .dropdown-menu-custom {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   6. Custom Scrollbar
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   7. Interactive Components & Utilities
+   -------------------------------------------------------------------------- */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Battery Voltage Meter simulation */
+.battery-gauge {
+  background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #10b981 100%);
+  height: 8px;
+  border-radius: 9999px;
+}
+
+/* Toast Notification */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+html[dir="rtl"] #toast-container {
+  right: auto;
+  left: 24px;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #fff;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideUp 0.3s ease forwards;
+  min-width: 280px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Accessibility & WCAG 2.1 AA Standards
+   -------------------------------------------------------------------------- */
+/* Accessible Skip-to-Content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: #0b0f19;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid #0284c7;
+  outline-offset: 2px;
+}
+
+html[dir="rtl"] .skip-link {
+  left: auto;
+  right: 1rem;
+}
+
+/* Accessible Focus Visible Indicator for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Minimum Touch Target Size (44x44px per WCAG 2.1 AAA & AA Mobile Guideline) */
+.touch-target,
+.btn-touch {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   9. Skeleton Loading States & Shimmer Effect
+   -------------------------------------------------------------------------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(226, 232, 240, 0.6) 25%,
+    rgba(203, 213, 225, 0.9) 37%,
+    rgba(226, 232, 240, 0.6) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  border-radius: var(--radius-sm);
+}
+
+.dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 41, 59, 0.7) 25%,
+    rgba(51, 65, 85, 0.9) 37%,
+    rgba(30, 41, 59, 0.7) 63%
+  );
+  background-size: 400% 100%;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  height: 1.75rem;
+  width: 60%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.skeleton-btn {
+  height: 44px;
+  width: 140px;
+  border-radius: var(--radius-lg);
+}
+
+/* --------------------------------------------------------------------------
+   10. Form Validation & Interactive Feedback
+   -------------------------------------------------------------------------- */
+.form-input.is-invalid,
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 1px #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.04);
+}
+
+.form-input.is-valid,
+input.is-valid,
+select.is-valid,
+textarea.is-valid {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 1px #10b981 !important;
+}
+
+.invalid-feedback {
+  display: none;
+  font-size: 0.775rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.valid-feedback {
+  display: none;
+  font-size: 0.775rem;
+  color: #10b981;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.is-valid ~ .valid-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. Payment Gateways & Secure Checkout Integration Placeholders
+   -------------------------------------------------------------------------- */
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.dark .payment-badge {
+  border-color: #334155;
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.payment-badge:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   12. Reduced Motion Accessibility
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. Print Stylesheet
+   -------------------------------------------------------------------------- */
+@media print {
+  header,
+  footer,
+  #toast-container,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. Page Hero & Breadcrumb Banners
+   -------------------------------------------------------------------------- */
+.page-banner-section {
+  position: relative;
+  background-color: #0f172a;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.38) 50%, rgba(15, 23, 42, 0.68) 100%);
+  z-index: 1;
+}
+
+.page-banner-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: radial-gradient(#f59e0b 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 2;
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 10;
+}
+
+.page-banner-content h1 {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 4px 25px rgba(0, 0, 0, 0.7);
+}
+
+.page-banner-content p,
+.page-banner-content nav,
+.page-banner-content a,
+.page-banner-content span {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+/* Prevent text-shadow from ruining bg-clip-text gradient text */
+.bg-clip-text,
+[class*="bg-clip-text"] {
+  text-shadow: none !important;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   15. Dual-Mode Index Hero Banner (Light & Dark Mode Support)
+   -------------------------------------------------------------------------- */
+.hero-banner-section {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+/* Light mode overlay: tailored horizontal gradient (high contrast on text, vibrant car on right) */
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(248, 250, 252, 0.92) 0%, rgba(248, 250, 252, 0.80) 42%, rgba(248, 250, 252, 0.28) 72%, rgba(248, 250, 252, 0.45) 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+/* Dark mode overlay: cinematic dark contrast with illuminated vehicle & technician on right */
+html.dark .hero-banner-overlay {
+  background: linear-gradient(90deg, rgba(11, 15, 25, 0.92) 0%, rgba(11, 15, 25, 0.80) 42%, rgba(11, 15, 25, 0.30) 72%, rgba(11, 15, 25, 0.50) 100%);
+}
+
+/* RTL Hero banner overlays: flip gradient so solid contrast covers text on the right side */
+html[dir="rtl"] .hero-banner-overlay {
+  background: linear-gradient(270deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.90) 45%, rgba(248, 250, 252, 0.35) 75%, rgba(248, 250, 252, 0.45) 100%) !important;
+}
+
+html[dir="rtl"].dark .hero-banner-overlay,
+html[dir="rtl"] .dark .hero-banner-overlay,
+.dark html[dir="rtl"] .hero-banner-overlay {
+  background: linear-gradient(270deg, rgba(11, 15, 25, 0.96) 0%, rgba(11, 15, 25, 0.90) 45%, rgba(11, 15, 25, 0.35) 75%, rgba(11, 15, 25, 0.50) 100%) !important;
+}
+
+.hero-banner-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: radial-gradient(#f59e0b 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 2;
+}
+

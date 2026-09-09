@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgAlt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#1a2234"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgAlt)"/>
+  <!-- Alternator Housing -->
+  <circle cx="400" cy="230" r="140" fill="#1e293b" stroke="#0ea5e9" stroke-width="4"/>
+  <circle cx="400" cy="230" r="100" fill="#0f172a" stroke="#38bdf8" stroke-dasharray="8 6" stroke-width="3"/>
+  <!-- Pulley -->
+  <circle cx="400" cy="230" r="45" fill="#334155" stroke="#f59e0b" stroke-width="6"/>
+  <circle cx="400" cy="230" r="18" fill="#cbd5e1"/>
+  <!-- Copper Coils visualization -->
+  <path d="M 330 160 Q 400 130 470 160 Q 500 230 470 300 Q 400 330 330 300 Q 300 230 330 160 Z" fill="none" stroke="#d97706" stroke-width="8" opacity="0.6"/>
+  <!-- Sparks / Electric Waves -->
+  <path d="M 230 200 L 260 220 L 245 235 L 285 260" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 570 200 L 540 220 L 555 235 L 515 260" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <text x="400" y="415" font-family="sans-serif" font-weight="900" font-size="24" fill="#38bdf8" text-anchor="middle">ALTERNATOR & STARTER REPAIR</text>
+  <text x="400" y="445" font-family="sans-serif" font-weight="500" font-size="15" fill="#94a3b8" text-anchor="middle">Voltage Regulator Testing • Bench Load Testing • Armature Rewinding</text>
+</svg>

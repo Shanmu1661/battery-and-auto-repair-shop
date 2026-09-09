@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgWire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#111d40"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgWire)"/>
+  <!-- Circuit board lines -->
+  <path d="M 100 150 H 250 L 300 200 H 500 L 550 150 H 700" fill="none" stroke="#1e293b" stroke-width="4"/>
+  <path d="M 150 350 H 320 L 360 300 H 480 L 520 350 H 680" fill="none" stroke="#1e293b" stroke-width="4"/>
+  <!-- Color Wires Loom -->
+  <path d="M 120 220 Q 250 140 400 240 T 680 200" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 120 240 Q 260 290 400 210 T 680 250" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 120 260 Q 270 190 400 280 T 680 220" fill="none" stroke="#eab308" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 120 280 Q 280 340 400 260 T 680 280" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <!-- Wire harness tape / connector -->
+  <rect x="360" y="180" width="80" height="130" rx="10" fill="#020617" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="380" cy="210" r="8" fill="#ef4444"/>
+  <circle cx="420" cy="210" r="8" fill="#3b82f6"/>
+  <circle cx="380" cy="250" r="8" fill="#eab308"/>
+  <circle cx="420" cy="250" r="8" fill="#10b981"/>
+  <circle cx="400" cy="285" r="10" fill="#f59e0b"/>
+  <!-- Multimeter probe testing spark -->
+  <path d="M 330 110 L 375 180" stroke="#f43f5e" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="375" cy="180" r="10" fill="#fbbf24"/>
+  <text x="400" y="415" font-family="sans-serif" font-weight="900" font-size="24" fill="#fbbf24" text-anchor="middle">WIRING & SHORT-CIRCUIT DIAGNOSTICS</text>
+  <text x="400" y="445" font-family="sans-serif" font-weight="500" font-size="15" fill="#94a3b8" text-anchor="middle">Parasitic Battery Drain Tracing • Harness Loom Repair • CAN-Bus Diagnostics</text>
+</svg>

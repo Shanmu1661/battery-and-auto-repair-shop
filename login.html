@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltFix Pro - Customer &amp; Tech Portal Login</title>
+  <meta name="description" content="Sign in to your VoltFix Pro account to view battery warranties, book diagnostic appointments, and track mobile technician vans live.">
+  <link rel="canonical" href="https://voltfixpro.com/login.html">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VoltFix Pro">
+  <meta property="og:title" content="VoltFix Pro - Customer &amp; Tech Portal Login">
+  <meta property="og:description" content="Sign in to your VoltFix Pro account to view battery warranties and track roadside assistance.">
+  <meta property="og:image" content="https://voltfixpro.com/images/hero.svg">
+  <meta property="og:url" content="https://voltfixpro.com/login.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            electric: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            },
+            slate: {
+              850: '#111827',
+              900: '#0f172a',
+              950: '#0b0f19',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950 min-h-screen flex items-center justify-center p-4 sm:p-6">
+
+  <!-- WCAG 2.1 AA Accessible Skip-to-Content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" class="w-full flex items-center justify-center">
+
+  <!-- AUTH CONTAINER (Dedicated layout excluding standard nav/footer) -->
+  <div class="w-full max-w-4xl bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+    
+    <!-- Left Decorative Panel (5 Cols) -->
+    <div class="lg:col-span-5 bg-slate-900 p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden bg-cover bg-center" style="background-image: url('images/banners/banner-ecu.jpg');">
+      <!-- Dark Backdrop Gradients & Pattern Overlay -->
+      <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]"></div>
+      <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:18px_18px]"></div>
+
+      <div class="relative z-10">
+        <a href="index.html" class="flex items-center gap-3 mb-10 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-md group-hover:scale-105 transition-transform shrink-0">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-tight text-white flex items-center gap-1.5 whitespace-nowrap">
+              VOLT<span class="text-amber-500">FIX</span> <span class="text-xs font-bold uppercase bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/20">PRO</span>
+            </span>
+            <span class="text-[10px] font-semibold tracking-wider uppercase text-slate-400 block -mt-0.5 whitespace-nowrap">Auto Electrical &amp; Battery Specialists</span>
+          </div>
+        </a>
+
+        <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs uppercase tracking-wider border border-amber-500/30 inline-block mb-3">Client & Technician Portal</span>
+        <h2 class="text-2xl sm:text-3xl font-black leading-tight">Track Warranties & Van Dispatch Live</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+          Log in to view digital battery conductance test reports, track your assigned mobile technician on live GPS, and claim free warranty replacements.
+        </p>
+      </div>
+
+      <div class="relative z-10 pt-8 border-t border-slate-800 mt-8 space-y-3">
+        <div class="flex items-center gap-3 text-xs text-slate-300">
+          <i class="fa-solid fa-shield-check text-emerald-400 text-base"></i>
+          <span>Encrypted 256-Bit SSL Vehicle Database</span>
+        </div>
+        <div class="flex items-center gap-3 text-xs text-slate-300">
+          <i class="fa-solid fa-truck-fast text-amber-400 text-base"></i>
+          <span>Real-time GPS Roadside Van Tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Login Form Panel (7 Cols) -->
+    <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between">
+      
+      <!-- Top Utilities (Dark Mode, RTL, Back to Home) -->
+      <div class="flex items-center justify-between gap-3 mb-8">
+        <a href="index.html" class="text-xs font-semibold text-slate-500 hover:text-amber-500 dark:text-slate-400 flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-arrow-left rtl-flip"></i> Return to Website
+        </a>
+
+        <div class="flex items-center gap-2">
+          <button type="button" class="rtl-toggle-btn p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs" title="Toggle RTL">
+            <i class="fa-solid fa-earth-americas text-amber-500"></i>
+            <span class="rtl-label ml-1 font-bold">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs" title="Toggle Theme">
+            <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Login Form -->
+      <div>
+        <h3 class="text-2xl font-black text-slate-900 dark:text-white">Sign In to Your Account</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-6">Enter your registered email or phone number to access your vehicle records.</p>
+
+        <form id="login-form" class="space-y-4 ajax-form" data-ajax-form="true" data-redirect="index.html" method="POST" action="index.html">
+          <div>
+            <label for="login-identity" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email or Phone Number *</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-3.5 top-3.5 text-slate-400"></i>
+              <input id="login-identity" name="identity" type="text" placeholder="name@example.com or (555) 000-0000" required minlength="3" class="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <div class="invalid-feedback"><i class="fa-solid fa-circle-exclamation text-xs"></i> <span class="msg-text">Please enter your email or phone number.</span></div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="login-password" class="block text-xs font-bold text-slate-700 dark:text-slate-300">Password *</label>
+              <a href="#" class="text-[11px] font-semibold text-amber-500 hover:text-amber-600">Forgot Password?</a>
+            </div>
+            <div class="relative">
+              <i class="fa-solid fa-lock absolute left-3.5 top-3.5 text-slate-400"></i>
+              <input id="login-password" name="password" type="password" placeholder="******" required minlength="6" class="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <div class="invalid-feedback"><i class="fa-solid fa-circle-exclamation text-xs"></i> <span class="msg-text">Please enter your password (min 6 characters).</span></div>
+          </div>
+
+          <div class="flex items-center justify-between pt-1">
+            <label for="remember-me" class="flex items-center gap-2 cursor-pointer text-xs text-slate-600 dark:text-slate-400">
+              <input id="remember-me" name="remember" type="checkbox" class="w-4 h-4 rounded text-amber-500 bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-700 focus:ring-amber-500">
+              <span>Keep me logged in</span>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full min-h-[44px] py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-sm shadow electric-glow-amber transition-transform hover:scale-[1.01]">
+            <i class="fa-solid fa-right-to-bracket mr-1.5"></i> Sign In to Portal
+          </button>
+        </form>
+
+        <div class="mt-6 text-center text-xs text-slate-500">
+          Don't have an account yet?
+          <a href="register.html" class="font-bold text-amber-500 hover:text-amber-600 ml-1">Register Vehicle / Warranty</a>
+        </div>
+      </div>
+
+      <div class="pt-8 text-center text-[11px] text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-8">
+        &copy; 2026 VoltFix Pro. Secure customer and fleet management portal.
+      </div>
+
+    </div>
+
+  </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

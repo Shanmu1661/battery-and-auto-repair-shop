@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <circle cx="400" cy="250" r="220" fill="#f59e0b" opacity="0.05"/>
+  <rect x="250" y="160" width="300" height="220" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="4"/>
+  <!-- Terminals -->
+  <rect x="290" y="125" width="50" height="35" rx="6" fill="#dc2626"/>
+  <text x="315" y="148" font-family="sans-serif" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">+</text>
+  <rect x="460" y="125" width="50" height="35" rx="6" fill="#475569"/>
+  <text x="485" y="148" font-family="sans-serif" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">-</text>
+  <!-- Handle -->
+  <path d="M 330 160 C 330 110, 470 110, 470 160" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <!-- Battery Details -->
+  <rect x="280" y="200" width="240" height="80" rx="8" fill="#0f172a"/>
+  <text x="400" y="235" font-family="sans-serif" font-weight="900" font-size="22" fill="#f59e0b" text-anchor="middle">VOLTFIX ULTRA 12V</text>
+  <text x="400" y="260" font-family="sans-serif" font-weight="600" font-size="14" fill="#94a3b8" text-anchor="middle">75Ah • 800 CCA • AGM TECH</text>
+  <!-- Indicator -->
+  <circle cx="400" cy="330" r="18" fill="#10b981"/>
+  <text x="400" y="336" font-family="sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">OK</text>
+  <text x="400" y="440" font-family="sans-serif" font-weight="bold" font-size="20" fill="#ffffff" text-anchor="middle">Battery Testing & Replacement Service</text>
+</svg>

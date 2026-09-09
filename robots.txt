@@ -1,0 +1,10 @@
+# VoltFix Pro Robots.txt
+# https://voltfixpro.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap Location
+Sitemap: https://voltfixpro.com/sitemap.xml
