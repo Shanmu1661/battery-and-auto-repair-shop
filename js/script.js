@@ -148,6 +148,50 @@ function initMobileNav() {
     }
   });
 
+  // Auto-close mobile drawer when any link inside it is clicked
+  const drawerLinks = drawer.querySelectorAll('a');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Window resize observer to auto-reset mobile drawer when switching to desktop/laptop view
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    }, 100);
+  });
+
+  // Touch swipe gesture to close mobile drawer on mobile/tablet devices
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  drawer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  drawer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+    const swipeThreshold = 50; // min 50px swipe
+    if (!isRtl && touchStartX - touchEndX > swipeThreshold) {
+      // Swiped left on LTR
+      closeMenu();
+    } else if (isRtl && touchEndX - touchStartX > swipeThreshold) {
+      // Swiped right on RTL
+      closeMenu();
+    }
+  }
+
   // Mobile submenu accordion toggles
   const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
   mobileSubmenuToggles.forEach(toggle => {
@@ -169,6 +213,7 @@ function initMobileNav() {
     });
   });
 }
+
 
 /* ==========================================================================
    4. FAQ Accordions

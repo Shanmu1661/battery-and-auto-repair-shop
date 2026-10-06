@@ -197,7 +197,20 @@
       </button>
     </div>
 
-    <div class="p-5 flex-1 overflow-y-auto space-y-3">
+        <div class="p-5 flex-1 overflow-y-auto space-y-3">
+      <!-- Mobile Preferences (RTL & Theme) -->
+      <div class="drawer-preference-bar">
+        <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Preferences</span>
+        <div class="flex items-center gap-2">
+          <button type="button" class="rtl-toggle-btn" title="Toggle RTL / LTR layout">
+            <i class="fa-solid fa-earth-americas text-amber-500 text-xs"></i>
+            <span class="rtl-label uppercase text-[11px]">RTL</span>
+          </button>
+          <button type="button" class="theme-toggle-btn" title="Toggle Dark / Light mode">
+            <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
+          </button>
+        </div>
+      </div>
       <!-- Home Submenu -->
       <div>
         <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between text-left font-bold text-slate-800 dark:text-slate-100 py-2" data-target="m-home-sub">

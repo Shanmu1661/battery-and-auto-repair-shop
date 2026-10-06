@@ -24,15 +24,43 @@
 }
 
 /* Base resets & smooth transitions */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  min-height: 100vh;
 }
+
+/* Fluid image & media scaling */
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Safe text wrap to prevent viewport breaking */
+p, h1, h2, h3, h4, h5, h6, span, a, li, dt, dd, blockquote {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 
 /* --------------------------------------------------------------------------
    2. Dark Mode Refinements
@@ -791,4 +819,498 @@ html[dir="rtl"] .dark .hero-banner-overlay,
   background-size: 24px 24px;
   z-index: 2;
 }
+
+/* --------------------------------------------------------------------------
+   16. Fluid Typography & Scalable Headings
+   -------------------------------------------------------------------------- */
+h1, .h1 {
+  font-size: clamp(1.75rem, 4vw + 1rem, 3.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-size: clamp(1.4rem, 3vw + 0.75rem, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h3, .h3 {
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 2rem);
+  line-height: 1.25;
+}
+
+h4, .h4 {
+  font-size: clamp(1.05rem, 1.5vw + 0.4rem, 1.5rem);
+  line-height: 1.3;
+}
+
+h5, .h5 {
+  font-size: clamp(0.95rem, 1vw + 0.35rem, 1.25rem);
+  line-height: 1.4;
+}
+
+h6, .h6 {
+  font-size: clamp(0.85rem, 0.8vw + 0.3rem, 1.1rem);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   17. Bootstrap-Compatible Grid & Responsive Utility System (Pure CSS)
+   -------------------------------------------------------------------------- */
+.container-fluid {
+  width: 100%;
+  padding-right: clamp(1rem, 3vw, 2.5rem);
+  padding-left: clamp(1rem, 3vw, 2.5rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+/* Responsive Columns */
+.col { flex: 1 0 0%; }
+.col-auto { flex: 0 0 auto; width: auto; }
+.col-12 { flex: 0 0 auto; width: 100%; }
+.col-6 { flex: 0 0 auto; width: 50%; }
+.col-4 { flex: 0 0 auto; width: 33.333333%; }
+.col-3 { flex: 0 0 auto; width: 25%; }
+
+@media (min-width: 640px) {
+  .col-sm-12 { flex: 0 0 auto; width: 100%; }
+  .col-sm-6 { flex: 0 0 auto; width: 50%; }
+  .col-sm-4 { flex: 0 0 auto; width: 33.333333%; }
+  .col-sm-3 { flex: 0 0 auto; width: 25%; }
+}
+
+@media (min-width: 768px) {
+  .col-md-12 { flex: 0 0 auto; width: 100%; }
+  .col-md-8 { flex: 0 0 auto; width: 66.666667%; }
+  .col-md-6 { flex: 0 0 auto; width: 50%; }
+  .col-md-4 { flex: 0 0 auto; width: 33.333333%; }
+  .col-md-3 { flex: 0 0 auto; width: 25%; }
+}
+
+@media (min-width: 1024px) {
+  .col-lg-12 { flex: 0 0 auto; width: 100%; }
+  .col-lg-8 { flex: 0 0 auto; width: 66.666667%; }
+  .col-lg-7 { flex: 0 0 auto; width: 58.333333%; }
+  .col-lg-6 { flex: 0 0 auto; width: 50%; }
+  .col-lg-5 { flex: 0 0 auto; width: 41.666667%; }
+  .col-lg-4 { flex: 0 0 auto; width: 33.333333%; }
+  .col-lg-3 { flex: 0 0 auto; width: 25%; }
+}
+
+/* Bootstrap Display Utilities */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-inline-flex { display: inline-flex !important; }
+.d-grid { display: grid !important; }
+
+@media (min-width: 640px) {
+  .d-sm-none { display: none !important; }
+  .d-sm-block { display: block !important; }
+  .d-sm-flex { display: flex !important; }
+  .d-sm-inline-flex { display: inline-flex !important; }
+}
+
+@media (min-width: 768px) {
+  .d-md-none { display: none !important; }
+  .d-md-block { display: block !important; }
+  .d-md-flex { display: flex !important; }
+  .d-md-inline-flex { display: inline-flex !important; }
+}
+
+@media (min-width: 1024px) {
+  .d-lg-none { display: none !important; }
+  .d-lg-block { display: block !important; }
+  .d-lg-flex { display: flex !important; }
+  .d-lg-inline-flex { display: inline-flex !important; }
+}
+
+/* Responsive Table Wrappers */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+
+@media (max-width: 640px) {
+  .table-responsive {
+    border-radius: 0.75rem;
+    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.15);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. Multi-Device Media Query Breakpoints
+   -------------------------------------------------------------------------- */
+
+/* 18.1 Ultra-Compact Smartphones (< 360px - e.g. iPhone SE 1st, Galaxy Fold Cover) */
+@media (max-width: 359.98px) {
+  header .w-11.h-11 {
+    width: 2rem !important;
+    height: 2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  header span.text-2xl {
+    font-size: 1.05rem !important;
+  }
+  
+  .hero-banner-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .gap-4, .gap-6, .gap-8 {
+    gap: 0.75rem !important;
+  }
+
+  .px-4, .p-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  button, .btn-touch, a.inline-flex {
+    font-size: 0.8125rem;
+  }
+
+  #toast-container {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 15px !important;
+    width: auto !important;
+  }
+
+  .toast {
+    min-width: 100% !important;
+    padding: 10px 14px !important;
+  }
+}
+
+/* 18.2 Standard Mobile Devices (Mobile & Tablet Portrait < 1024px) */
+@media (max-width: 1023.98px) {
+  /* Mobile Menu Hamburger Button Guaranteed Visibility & Styling */
+  #mobile-menu-open,
+  button#mobile-menu-open,
+  header button[id="mobile-menu-open"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    background-color: rgba(245, 158, 11, 0.12) !important;
+    border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+    color: #f59e0b !important;
+    border-radius: 0.75rem !important;
+    cursor: pointer !important;
+    z-index: 30 !important;
+    margin-left: 0.25rem !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  #mobile-menu-open i {
+    font-size: 1.15rem !important;
+    color: #f59e0b !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+  }
+
+  html.dark #mobile-menu-open,
+  html.dark button#mobile-menu-open,
+  html.dark header button[id="mobile-menu-open"] {
+    background-color: rgba(245, 158, 11, 0.20) !important;
+    border-color: rgba(245, 158, 11, 0.6) !important;
+    color: #fbbf24 !important;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.2) !important;
+  }
+
+  html.dark #mobile-menu-open i {
+    color: #fbbf24 !important;
+  }
+
+  #mobile-menu-open:hover,
+  #mobile-menu-open:active {
+    background-color: #f59e0b !important;
+    color: #0f172a !important;
+    transform: scale(1.05) !important;
+  }
+
+  #mobile-menu-open:hover i,
+  #mobile-menu-open:active i {
+    color: #0f172a !important;
+  }
+
+  html[dir="rtl"] #mobile-menu-open {
+    margin-left: 0 !important;
+    margin-right: 0.25rem !important;
+  }
+}
+
+/* Mobile Header Layout Optimization (< 640px) */
+@media (max-width: 639.98px) {
+  header > div {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  header .h-20 {
+    height: 4.25rem !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Compact Brand Logo on Mobile to leave room for controls */
+  header a.flex.items-center.gap-3 {
+    gap: 0.4rem !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+
+  header a.flex.items-center.gap-3 .w-11.h-11 {
+    width: 2.15rem !important;
+    height: 2.15rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 0.6rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  header a.flex.items-center.gap-3 span.text-2xl {
+    font-size: 1.15rem !important;
+    letter-spacing: -0.02em !important;
+    white-space: nowrap !important;
+  }
+
+  header a.flex.items-center.gap-3 span.text-2xl span.text-xs {
+    font-size: 0.65rem !important;
+    padding: 0.05rem 0.3rem !important;
+  }
+
+  /* Header action buttons container */
+  header .flex.items-center.shrink-0:last-child {
+    gap: 0.35rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hide header navbar RTL & Theme toggles on mobile view (they are inside hamburger menu drawer) */
+  header .rtl-toggle-btn,
+  header .theme-toggle-btn {
+    display: none !important;
+  }
+
+  /* Prevent iOS input zooming */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Full width mobile buttons */
+  .mobile-btn-block {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Optimized Mobile Toast */
+  #toast-container {
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 20px !important;
+    align-items: center;
+  }
+
+  .toast {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Safe Area Support for Notches & Home Bars */
+  header {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+
+  footer {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
+  #mobile-menu-drawer {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+
+/* 18.3 Tablets & Small Laptops (640px to 1023.98px) */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .hero-banner-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* Tablet 2-column card balance */
+  .tablet-col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 18.4 Standard Laptops & Desktops (1024px to 1535.98px) */
+@media (min-width: 1024px) {
+  #mobile-menu-drawer,
+  #mobile-menu-backdrop {
+    display: none !important;
+  }
+}
+
+/* 18.5 Ultrawide, 2K & 4K Monitors (1536px and above) */
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 88rem;
+  }
+  
+  .max-w-\[1920px\] {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   19. Touch Usability & Responsive Enhancements
+   -------------------------------------------------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+  /* Provide comfortable touch zones */
+  button, 
+  a, 
+  input[type="checkbox"], 
+  input[type="radio"],
+  .touch-target {
+    touch-action: manipulation;
+  }
+
+  /* Disable sticky hover effects on touch devices */
+  .glow-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Smooth Momentum Scroll on Mobile */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile Sticky Bottom Action Bar Support (For emergency quick call / diagnostic) */
+.mobile-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: 0.75rem 1rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid #e2e8f0;
+  backdrop-filter: blur(8px);
+}
+
+.dark .mobile-sticky-cta {
+  background: rgba(11, 15, 25, 0.96);
+  border-color: #1f2937;
+}
+
+/* --------------------------------------------------------------------------
+   20. Drawer Preference Controls (In-Drawer RTL & Theme Switchers)
+   -------------------------------------------------------------------------- */
+.drawer-preference-bar {
+  padding: 0.65rem 0.85rem;
+  background-color: #f1f5f9;
+  border-radius: 0.875rem;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+html.dark .drawer-preference-bar {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+
+.drawer-preference-bar .rtl-toggle-btn,
+.drawer-preference-bar .theme-toggle-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.625rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  min-height: 38px;
+}
+
+html.dark .drawer-preference-bar .rtl-toggle-btn,
+html.dark .drawer-preference-bar .theme-toggle-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+}
+
+.drawer-preference-bar .rtl-toggle-btn:hover,
+.drawer-preference-bar .theme-toggle-btn:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+
 
