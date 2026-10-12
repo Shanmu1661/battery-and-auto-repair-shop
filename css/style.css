@@ -987,11 +987,23 @@ textarea.is-valid {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 4px 25px rgba(0, 0, 0, 0.7);
 }
 
-.page-banner-content p,
-.page-banner-content nav,
-.page-banner-content a,
-.page-banner-content span {
+.page-banner-content p {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+/* Prevent text-shadow from ruining buttons, links, forms, inputs, and interactive widgets */
+.page-banner-content a,
+.page-banner-content button,
+.page-banner-content a *,
+.page-banner-content button *,
+.page-banner-content input,
+.page-banner-content select,
+.page-banner-content label,
+.page-banner-content form,
+.page-banner-content .badge,
+a[class*="bg-amber"],
+button[class*="bg-amber"] {
+  text-shadow: none !important;
 }
 
 /* Prevent text-shadow from ruining bg-clip-text gradient text */
