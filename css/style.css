@@ -37,16 +37,25 @@ html {
   text-size-adjust: 100%;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   position: relative;
   min-height: 100vh;
+}
+
+/* Sticky Navigation Header */
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
 }
 
 /* Fluid image & media scaling */

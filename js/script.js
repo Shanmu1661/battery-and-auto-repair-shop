@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkeletonLoaders();
   initActiveNav();
   initAnimatedCounters();
+  initStickyHeader();
   try {
     localStorage.removeItem('voltfix_logged_in');
     localStorage.removeItem('voltfix_user_name');
@@ -900,6 +901,25 @@ function initAnimatedCounters() {
   } else {
     counters.forEach(counter => animateCounter(counter));
   }
+}
+
+/* ==========================================================================
+   16. Sticky Header Scroll Effect
+   ========================================================================== */
+function initStickyHeader() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      header.classList.add('shadow-md');
+    } else {
+      header.classList.remove('shadow-md');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 }
 
 

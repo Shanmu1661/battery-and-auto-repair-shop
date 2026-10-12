@@ -11,7 +11,7 @@ Built to meet the highest commercial standards of platforms like ThemeForest, Te
 - **Strict Vanilla Stack**: Semantic HTML5, CSS3 (`css/style.css`), Vanilla JavaScript (`js/script.js`), Tailwind CSS CDN, and Font Awesome 6. Zero Node.js build dependencies required.
 - **Single-Bar Navigation**: Modern, uncluttered header bar with integrated Dark/Light mode toggle, RTL switch, dropdown menus, and quick booking CTA. (No distracting topbar strip).
 - **Dark Mode & Light Mode**: Persistent in `localStorage`, smoothly transitioning between dark slate/navy backgrounds and clean light modes with crisp electric amber/cyan accents.
-- **RTL (Right-to-Left) Functionality Across All Pages**: Instant RTL toggle in the navbar and footer with complete Arabic/Hebrew layout mirroring, typography support (Cairo font), and directional icon flipping (`rtl-flip`).
+- **RTL (Right-to-Left) Functionality Across All Pages**: Instant RTL toggle in the navbar with complete Arabic/Hebrew layout mirroring, typography support (Cairo font), and directional icon flipping (`rtl-flip`).
 - **WCAG 2.1 AA Accessibility Compliant**:
   - Accessible Skip-to-Content links on all 14 pages (`<a href="#main-content" class="skip-link">`).
   - Semantic `<main id="main-content">` on every page.
