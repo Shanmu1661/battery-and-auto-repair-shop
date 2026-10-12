@@ -7,6 +7,11 @@
   <meta name="description" content="Contact VoltFix Pro for 24/7 mobile battery replacement, alternator testing, and emergency roadside dispatch. Instant booking form and map locations.">
   <meta name="keywords" content="contact auto electrician, roadside battery dispatch, car battery shop near me, alternator repair contact">
   <link rel="canonical" href="https://voltfixpro.com/contact.html">
+  <!-- Favicon / Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- OpenGraph / Social Meta Tags -->
   <meta property="og:type" content="website">
@@ -150,25 +155,21 @@
         </nav>
 
         <!-- Right Action Buttons & Mobile Toggle -->
-        <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
-          <button type="button" class="rtl-toggle-btn inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors text-xs font-bold whitespace-nowrap" title="Toggle RTL / LTR layout">
-            <i class="fa-solid fa-earth-americas text-amber-500 text-xs"></i>
-            <span class="rtl-label uppercase text-[11px]">RTL</span>
+        <div class="header-action-group flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <button type="button" class="rtl-toggle-btn inline-flex items-center justify-center gap-2 h-11 px-3.5 sm:px-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 text-slate-700 dark:text-slate-200 transition-all text-xs sm:text-sm font-bold whitespace-nowrap shadow-sm" title="Toggle RTL / LTR layout">
+            <i class="fa-solid fa-globe text-amber-500 text-sm"></i>
+            <span class="rtl-label uppercase text-xs sm:text-sm font-bold tracking-wider">RTL</span>
+            <i class="fa-solid fa-right-left text-slate-400 dark:text-slate-400 text-xs"></i>
           </button>
-          <button type="button" class="theme-toggle-btn p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors text-xs font-bold whitespace-nowrap" title="Toggle Dark / Light mode">
-            <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
+          <button type="button" class="theme-toggle-btn inline-flex items-center justify-center h-11 w-11 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 text-slate-700 dark:text-slate-200 transition-all text-xs sm:text-sm font-bold whitespace-nowrap shadow-sm shrink-0" title="Toggle Dark / Light mode">
+            <i class="fa-solid fa-moon theme-icon text-amber-500 text-sm"></i>
           </button>
-          <a href="contact.html#booking" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-md electric-glow-amber transition-all hover:scale-105 whitespace-nowrap">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>Book Diagnostic</span>
+          <a href="contact.html#booking" class="hidden sm:inline-flex items-center justify-center gap-2 h-11 px-4 sm:px-5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md electric-glow-amber transition-all hover:scale-[1.02] whitespace-nowrap" title="Book Certified Auto Electrical Service">
+            <i class="fa-solid fa-calendar-check text-slate-950 text-sm"></i>
+            <span>Book a Service</span>
           </a>
-          <!-- Login Button on last right -->
-          <a href="login.html" class="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-amber-500 dark:hover:border-amber-400 text-slate-700 dark:text-slate-200 hover:text-amber-500 dark:hover:text-amber-400 font-semibold text-xs sm:text-sm transition-all whitespace-nowrap" title="Customer &amp; Tech Portal Login">
-            <i class="fa-regular fa-user text-xs text-amber-500"></i>
-            <span>Login</span>
-          </a>
-          <button id="mobile-menu-open" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none" aria-label="Open mobile menu">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="mobile-menu-open" type="button" class="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 border border-slate-200 dark:border-slate-700 focus:outline-none shrink-0" aria-label="Open mobile menu">
+            <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -205,8 +206,9 @@
         <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Preferences</span>
         <div class="flex items-center gap-2">
           <button type="button" class="rtl-toggle-btn" title="Toggle RTL / LTR layout">
-            <i class="fa-solid fa-earth-americas text-amber-500 text-xs"></i>
+            <i class="fa-solid fa-globe text-amber-500 text-xs"></i>
             <span class="rtl-label uppercase text-[11px]">RTL</span>
+            <i class="fa-solid fa-right-left text-slate-400 dark:text-slate-400 text-[10px]"></i>
           </button>
           <button type="button" class="theme-toggle-btn" title="Toggle Dark / Light mode">
             <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
@@ -236,12 +238,8 @@
       <a href="contact.html" class="block font-bold text-slate-800 dark:text-slate-100 py-2 hover:text-amber-500">Contact</a>
 
       <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
-        <a href="login.html" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:border-amber-500">
-          <i class="fa-regular fa-user text-amber-500"></i>
-          <span>Login / Portal</span>
-        </a>
-        <a href="contact.html#booking" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm text-center block shadow">
-          Book Diagnostic
+        <a href="contact.html#booking" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm text-center block shadow">
+          Book a Service
         </a>
       </div>
     </div>
@@ -257,56 +255,79 @@
     <!-- Dark Backdrop Gradients & Pattern Overlay -->
     <div class="page-banner-overlay"></div>
     <div class="page-banner-grid-pattern"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-banner-content">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">24/7 Mobile Dispatch & Workshop Station</span>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-tight mt-1">Contact & Emergency Booking</h1>
-        </div>
-        <div class="flex items-center gap-2 text-xs text-slate-400">
-          <a href="index.html" class="hover:text-white">Home</a>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 page-banner-content text-center">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs uppercase tracking-wider border border-amber-500/30 mb-3 shadow-sm">
+        24/7 Mobile Dispatch & Workshop Station
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mb-3">
+        Contact & Emergency Booking
+      </h1>
+      <p class="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed mb-5 font-medium">
+        Need rapid roadside battery dispatch or a workshop appointment? Call our 24/7 emergency hotline at (800) 555-VOLT or submit an online diagnostic request below.
+      </p>
+      <div class="inline-flex items-center justify-center gap-2 text-xs text-slate-300 px-4 py-1.5 rounded-full bg-slate-900/70 border border-slate-700/80 backdrop-blur-md shadow-sm">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
           <i class="fa-solid fa-chevron-right rtl-flip text-[10px]"></i>
           <span class="text-amber-400 font-semibold">Contact</span>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- 3 INFO CARDS (Hotline, Workshop, Hours) -->
-  <section class="py-12 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+  <section class="py-14 sm:py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Center Aligned Section Header with Relevant Sub Details -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-500 font-bold text-xs uppercase tracking-wider border border-amber-500/20 mb-3 shadow-sm">
+          Direct Contact Channels
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-2">
+          Reach Our Rapid Response Team
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+          Whether you need urgent 25-minute highway dispatch or an appointment at our advanced testing facility, our certified technicians are available around the clock.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-xl shrink-0">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-2xl shrink-0 mb-4 shadow-sm">
             <i class="fa-solid fa-phone-volume"></i>
           </div>
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-500">24/7 Roadside Hotline</span>
-            <h4 class="text-lg font-black text-slate-900 dark:text-white mt-1">(800) 555-8658</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WhatsApp & Direct Dispatch: +1 (800) 555-VOLT</p>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-500">24/7 Roadside Hotline</span>
+          <h4 class="text-xl font-black text-slate-900 dark:text-white mt-1 mb-1">(800) 555-8658</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">WhatsApp & Direct Dispatch: +1 (800) 555-VOLT</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 w-full text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-circle-check text-[10px]"></i>
+            <span>Average 25-Minute On-Site Dispatch</span>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center font-black text-xl shrink-0">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500 text-white flex items-center justify-center font-black text-2xl shrink-0 mb-4 shadow-sm">
             <i class="fa-solid fa-location-dot"></i>
           </div>
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-sky-500">Workshop & Lab Station</span>
-            <h4 class="text-lg font-black text-slate-900 dark:text-white mt-1">1420 Sparkplug Way</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Electrical Bay 4, Auto District, NY 10001</p>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-500">Workshop & Lab Station</span>
+          <h4 class="text-xl font-black text-slate-900 dark:text-white mt-1 mb-1">1420 Sparkplug Way</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Electrical Bay 4, Auto District, NY 10001</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 w-full text-[11px] font-semibold text-sky-600 dark:text-sky-400 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-car-side text-[10px]"></i>
+            <span>Dedicated Customer Drive-In Diagnostic Bay</span>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-xl shrink-0">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-2xl shrink-0 mb-4 shadow-sm">
             <i class="fa-solid fa-clock"></i>
           </div>
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-emerald-500">Service Hours</span>
-            <h4 class="text-lg font-black text-slate-900 dark:text-white mt-1">Mon - Sat: 7:30 AM - 8 PM</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sunday: 24/7 Emergency Roadside Dispatch Only</p>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-500">Service Hours</span>
+          <h4 class="text-xl font-black text-slate-900 dark:text-white mt-1 mb-1">Mon - Sat: 7:30 AM - 8 PM</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Sunday: Emergency Dispatch & Van Fleet Only</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 w-full text-[11px] font-semibold text-amber-600 dark:text-amber-400 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-bolt-lightning text-[10px]"></i>
+            <span>365-Day 24/7 Mobile Roadside Coverage</span>
           </div>
         </div>
 
@@ -315,7 +336,8 @@
   </section>
 
   <!-- INTERACTIVE BOOKING FORM & GOOGLE MAP SECTION -->
-  <div id="booking"></div>`r`n  <section id="booking-form" class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950">
+  <div id="booking"></div>
+  <section id="booking-form" class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
@@ -323,7 +345,7 @@
         <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
           <div class="mb-6">
             <span class="text-xs font-black uppercase tracking-wider text-amber-500">Doorstep or Workshop Visit</span>
-            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1">Book Diagnostic or Battery Service</h2>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1">Book a Service or Battery Service</h2>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Our mobile technician will contact you within 15 minutes to confirm exact arrival.</p>
           </div>
 
@@ -399,7 +421,7 @@
               <textarea id="contact-symptoms" name="symptoms" rows="3" placeholder="e.g. Engine clicks but won't crank, battery light turned on while driving, battery died after sitting for 2 days..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-amber-500"></textarea>
             </div>
 
-            <button type="submit" class="w-full min-h-[44px] py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-sm shadow electric-glow-amber transition-transform hover:scale-[1.01]">
+            <button type="submit" class="w-full min-h-[44px] py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm shadow electric-glow-amber transition-transform hover:scale-[1.01]">
               <i class="fa-solid fa-truck-fast mr-1.5"></i> Request Immediate Mobile Dispatch
             </button>
           </form>
@@ -540,7 +562,7 @@
           <form class="newsletter-form flex items-center gap-2 pt-2" method="POST" action="https://formspree.io/f/your-newsletter-id">
             <label for="footer-email-input" class="sr-only">Email address for newsletter</label>
             <input id="footer-email-input" type="email" placeholder="Your email for tips..." required class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500">
-            <button type="submit" aria-label="Subscribe to newsletter" class="px-3.5 py-2 min-h-[44px] min-w-[44px] bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg text-xs transition-colors shrink-0 flex items-center justify-center">
+            <button type="submit" aria-label="Subscribe to newsletter" class="px-3.5 py-2 min-h-[44px] min-w-[44px] bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition-colors shrink-0 flex items-center justify-center">
               <i class="fa-solid fa-paper-plane rtl-flip"></i>
             </button>
           </form>

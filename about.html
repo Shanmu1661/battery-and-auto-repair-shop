@@ -7,6 +7,11 @@
   <meta name="description" content="Learn about VoltFix Pro's 15-year history in auto electrical diagnostics, certified battery testing, ASE master mechanics, and advanced oscilloscope tools.">
   <meta name="keywords" content="about auto electrician, ASE certified master mechanic, car battery shop history, Midtronics testing">
   <link rel="canonical" href="https://voltfixpro.com/about.html">
+  <!-- Favicon / Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- OpenGraph / Social Meta Tags -->
   <meta property="og:type" content="website">
@@ -141,25 +146,21 @@
         </nav>
 
         <!-- Right Action Buttons & Mobile Toggle -->
-        <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
-          <button type="button" class="rtl-toggle-btn inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors text-xs font-bold whitespace-nowrap" title="Toggle RTL / LTR layout">
-            <i class="fa-solid fa-earth-americas text-amber-500 text-xs"></i>
-            <span class="rtl-label uppercase text-[11px]">RTL</span>
+        <div class="header-action-group flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <button type="button" class="rtl-toggle-btn inline-flex items-center justify-center gap-2 h-11 px-3.5 sm:px-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 text-slate-700 dark:text-slate-200 transition-all text-xs sm:text-sm font-bold whitespace-nowrap shadow-sm" title="Toggle RTL / LTR layout">
+            <i class="fa-solid fa-globe text-amber-500 text-sm"></i>
+            <span class="rtl-label uppercase text-xs sm:text-sm font-bold tracking-wider">RTL</span>
+            <i class="fa-solid fa-right-left text-slate-400 dark:text-slate-400 text-xs"></i>
           </button>
-          <button type="button" class="theme-toggle-btn p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors text-xs font-bold whitespace-nowrap" title="Toggle Dark / Light mode">
-            <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
+          <button type="button" class="theme-toggle-btn inline-flex items-center justify-center h-11 w-11 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 text-slate-700 dark:text-slate-200 transition-all text-xs sm:text-sm font-bold whitespace-nowrap shadow-sm shrink-0" title="Toggle Dark / Light mode">
+            <i class="fa-solid fa-moon theme-icon text-amber-500 text-sm"></i>
           </button>
-          <a href="contact.html#booking" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-md electric-glow-amber transition-all hover:scale-105 whitespace-nowrap">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>Book Diagnostic</span>
+          <a href="contact.html#booking" class="hidden sm:inline-flex items-center justify-center gap-2 h-11 px-4 sm:px-5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md electric-glow-amber transition-all hover:scale-[1.02] whitespace-nowrap" title="Book Certified Auto Electrical Service">
+            <i class="fa-solid fa-calendar-check text-slate-950 text-sm"></i>
+            <span>Book a Service</span>
           </a>
-          <!-- Login Button on last right -->
-          <a href="login.html" class="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-amber-500 dark:hover:border-amber-400 text-slate-700 dark:text-slate-200 hover:text-amber-500 dark:hover:text-amber-400 font-semibold text-xs sm:text-sm transition-all whitespace-nowrap" title="Customer &amp; Tech Portal Login">
-            <i class="fa-regular fa-user text-xs text-amber-500"></i>
-            <span>Login</span>
-          </a>
-          <button id="mobile-menu-open" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none" aria-label="Open mobile menu">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="mobile-menu-open" type="button" class="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700/90 border border-slate-200 dark:border-slate-700 focus:outline-none shrink-0" aria-label="Open mobile menu">
+            <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -196,8 +197,9 @@
         <span class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Preferences</span>
         <div class="flex items-center gap-2">
           <button type="button" class="rtl-toggle-btn" title="Toggle RTL / LTR layout">
-            <i class="fa-solid fa-earth-americas text-amber-500 text-xs"></i>
+            <i class="fa-solid fa-globe text-amber-500 text-xs"></i>
             <span class="rtl-label uppercase text-[11px]">RTL</span>
+            <i class="fa-solid fa-right-left text-slate-400 dark:text-slate-400 text-[10px]"></i>
           </button>
           <button type="button" class="theme-toggle-btn" title="Toggle Dark / Light mode">
             <i class="fa-solid fa-moon theme-icon text-amber-500"></i>
@@ -227,12 +229,8 @@
       <a href="contact.html" class="block font-bold text-slate-800 dark:text-slate-100 py-2 hover:text-amber-500">Contact</a>
 
       <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
-        <a href="login.html" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:border-amber-500">
-          <i class="fa-regular fa-user text-amber-500"></i>
-          <span>Login / Portal</span>
-        </a>
-        <a href="contact.html#booking" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm text-center block shadow">
-          Book Diagnostic
+        <a href="contact.html#booking" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm text-center block shadow">
+          Book a Service
         </a>
       </div>
     </div>
@@ -250,17 +248,20 @@
     <!-- Dark Backdrop Gradients & Pattern Overlay -->
     <div class="page-banner-overlay"></div>
     <div class="page-banner-grid-pattern"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-banner-content">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Our Heritage & Expertise</span>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-tight mt-1">About VoltFix Pro Specialists</h1>
-        </div>
-        <div class="flex items-center gap-2 text-xs text-slate-400">
-          <a href="index.html" class="hover:text-white">Home</a>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 page-banner-content text-center">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs uppercase tracking-wider border border-amber-500/30 mb-3 shadow-sm">
+        Our Heritage & Expertise
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white mb-3">
+        About VoltFix Pro Specialists
+      </h1>
+      <p class="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed mb-5 font-medium">
+        Aviation-grade auto electrical diagnostics, certified battery testing, and 24/7 doorstep roadside dispatch with 15 years of master engineering expertise.
+      </p>
+      <div class="inline-flex items-center justify-center gap-2 text-xs text-slate-300 px-4 py-1.5 rounded-full bg-slate-900/70 border border-slate-700/80 backdrop-blur-md shadow-sm">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
           <i class="fa-solid fa-chevron-right rtl-flip text-[10px]"></i>
           <span class="text-amber-400 font-semibold">About Us</span>
-        </div>
       </div>
     </div>
   </section>
@@ -270,11 +271,25 @@
        ======================================================================== -->
   <section class="py-16 sm:py-20 bg-white dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Center Aligned Section Header with Relevant Sub Details -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-500 font-bold text-xs uppercase tracking-wider border border-amber-500/20 mb-3 shadow-sm">
+          Precision Engineering Heritage
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight mb-3">
+          15 Years of Automotive Electrical Innovation
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+          Applying aerospace-grade wire harness standards, oscilloscope waveform analysis, and 24/7 doorstep roadside dispatch across over 1,200 monthly installations.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-6 space-y-6">
           <span class="px-3.5 py-1 rounded-full bg-amber-500/10 text-amber-500 font-bold text-xs uppercase tracking-wider border border-amber-500/20 inline-block">Established 2011</span>
-          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">15 Years of Automotive Electrical Innovation</h2>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Zero Guesswork Part Swapping</h3>
           <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
             VoltFix Pro started with a simple belief: automobile electrical systems should never be a mystery of trial-and-error part swapping. Founded by two aerospace electrical technicians who applied aviation-grade wire harness standards to vehicles, we have grown into the region's leading auto electrical diagnostic workshop and 24/7 doorstep dispatch service.
           </p>
@@ -317,48 +332,48 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Principle 1 -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-black text-xl mb-4">
             <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
           <span class="text-xs font-mono font-bold text-amber-500 uppercase">Standard 01</span>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2">Aviation-Grade Splices</h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2 leading-snug">Aviation-Grade Splices</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Zero twist caps or scotchlocks. We exclusively use heat-shrink adhesive solder sleeves and weather-pack sealed connectors rated for 150°C engine bays.
           </p>
         </div>
 
         <!-- Principle 2 -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-black text-xl mb-4">
             <i class="fa-solid fa-wave-square"></i>
           </div>
           <span class="text-xs font-mono font-bold text-sky-500 uppercase">Standard 02</span>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2">Oscilloscope Diagnostics</h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2 leading-snug">Oscilloscope Diagnostics</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             We measure microsecond voltage drops and CAN-bus waveform packets directly. No replacing parts on guesswork at the customer's expense.
           </p>
         </div>
 
         <!-- Principle 3 -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-black text-xl mb-4">
             <i class="fa-solid fa-recycle"></i>
           </div>
           <span class="text-xs font-mono font-bold text-emerald-500 uppercase">Standard 03</span>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2">100% Closed-Loop Recycling</h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2 leading-snug">Closed-Loop Recycling</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Over 99.4% of every lead-acid, AGM, and spent lithium battery core we remove is safely recycled through EPA-certified circular smelters.
           </p>
         </div>
 
         <!-- Principle 4 -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center font-black text-xl mb-4">
             <i class="fa-solid fa-file-invoice"></i>
           </div>
           <span class="text-xs font-mono font-bold text-purple-500 uppercase">Standard 04</span>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2">Digital Proof Reports</h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2 leading-snug">Digital Proof Reports</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
             Every customer receives a complete digital health report with before-and-after oscilloscope captures, CCA readings, and thermal photos.
           </p>
@@ -647,14 +662,18 @@
             Don't waste money swapping parts on guesswork. Bring your car to our state-of-the-art laboratory or let our mobile van arrive at your location in under 25 minutes.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a href="contact.html#booking" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-sm transition-all shadow-lg hover:shadow-amber-500/20 hover:-translate-y-0.5 flex items-center justify-center gap-2">
-              <i class="fa-regular fa-calendar-check"></i>
-              <span>Book Diagnostic Appointment</span>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="contact.html#booking" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm transition-all shadow-lg electric-glow-amber hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-check text-base"></i>
+              <span>Book a Service</span>
             </a>
-            <a href="tel:+18005558658" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-all flex items-center justify-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <span>Emergency Hotline: (800) 555-VOLT</span>
+            <a href="brands.html" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm transition-all shadow-lg electric-glow-amber hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-car-battery text-base"></i>
+              <span>Shop a Battery</span>
+            </a>
+            <a href="tel:+18005558658" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm transition-all shadow-lg electric-glow-amber hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-comments text-base"></i>
+              <span>Enquire: (800) 555-VOLT</span>
             </a>
           </div>
 
@@ -760,7 +779,7 @@
           <form class="newsletter-form flex items-center gap-2 pt-2" method="POST" action="https://formspree.io/f/your-newsletter-id">
             <label for="footer-email-input" class="sr-only">Email address for newsletter</label>
             <input id="footer-email-input" type="email" placeholder="Your email for tips..." required class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500">
-            <button type="submit" aria-label="Subscribe to newsletter" class="px-3.5 py-2 min-h-[44px] min-w-[44px] bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg text-xs transition-colors shrink-0 flex items-center justify-center">
+            <button type="submit" aria-label="Subscribe to newsletter" class="px-3.5 py-2 min-h-[44px] min-w-[44px] bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs transition-colors shrink-0 flex items-center justify-center">
               <i class="fa-solid fa-paper-plane rtl-flip"></i>
             </button>
           </form>

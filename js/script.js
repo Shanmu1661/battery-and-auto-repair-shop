@@ -544,43 +544,12 @@ function initFormsAndToasts() {
         return;
       }
 
-      const redirectUrl = form.getAttribute('data-redirect');
-      const isLoginForm = form.id === 'login-form' || form.classList.contains('login-form') || window.location.pathname.endsWith('login.html') || window.location.pathname.includes('login');
-      const isRegisterForm = form.id === 'register-form' || form.classList.contains('register-form') || window.location.pathname.endsWith('register.html') || window.location.pathname.includes('register');
-
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = isLoginForm 
-          ? '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Signing in...' 
-          : isRegisterForm 
-            ? '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Registering...' 
-            : '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
-      }
-
-      // Handle login form submission and redirect to index.html
-      if (isLoginForm || (redirectUrl && !isRegisterForm)) {
-        const targetUrl = redirectUrl || 'index.html';
-        await new Promise(resolve => setTimeout(resolve, 600));
-        showToast('Sign in successful! Redirecting to home...', 'success');
-
-        setTimeout(() => {
-          window.location.href = targetUrl;
-        }, 800);
-        return;
-      }
-
-      // Handle register form submission and redirect to index.html
-      if (isRegisterForm) {
-        await new Promise(resolve => setTimeout(resolve, 600));
-        showToast('Account registered successfully! Redirecting to home...', 'success');
-
-        setTimeout(() => {
-          window.location.href = redirectUrl || 'index.html';
-        }, 800);
-        return;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submitting...';
       }
 
       const action = form.getAttribute('action');

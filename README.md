@@ -62,12 +62,14 @@ auto-repair-shop/
 ├── blog.html                # Blog Hub - Filterable & Searchable Automotive Care Articles
 ├── blog-details.html        # Single Blog Post - 5 Warning Signs of a Bad Alternator
 ├── contact.html             # Contact Us - Emergency Dispatch Request & Google Map
-├── login.html               # Customer & Technician Portal Login
-├── register.html            # Account Registration & Vehicle Warranty Profile Setup
 ├── 404.html                 # Automotive Themed Error Page ("Circuit Broken")
 ├── coming-soon.html         # Maintenance / New Branch Opening with Live Countdown
-├── sitemap.xml              # XML Sitemap covering all 14 pages
+├── sitemap.xml              # XML Sitemap covering all pages
 ├── robots.txt               # Search engine crawl rules & sitemap reference
+├── favicon.svg              # Brand vector favicon (amber lightning badge)
+├── favicon.ico              # Multi-resolution browser icon (16, 32, 48px)
+├── favicon.png              # Standard PNG favicon
+├── apple-touch-icon.png     # iOS / mobile homescreen touch icon
 │
 ├── css/
 │   └── style.css            # Custom theme variables, RTL overrides, skeleton screens, focus rings
@@ -101,7 +103,7 @@ No complex build process or Node.js/npm commands are required:
 1. **Local Preview**: Double-click any `.html` file in your file explorer to open it directly in any modern web browser (Chrome, Edge, Firefox, Safari).
 2. **Web Hosting**: Upload all files and folders directly to any web server (Apache, Nginx, cPanel, GitHub Pages, Netlify, Vercel, or AWS S3).
 3. **Configuring Contact Forms (Formspree)**:
-   - In `contact.html`, `service-details.html`, `login.html`, and `register.html`, replace `https://formspree.io/f/your-form-id` with your actual Formspree endpoint.
+   - In `contact.html` and `service-details.html`, replace `https://formspree.io/f/your-form-id` with your actual Formspree endpoint.
    - For Netlify hosting, simply add `data-netlify="true"` to `<form>`.
 4. **Changing the Hotline Number**: Search and replace `(800) 555-VOLT` and `tel:+18005558658` across the HTML files with your shop's phone number.
 5. **Changing the Google Map**: In `contact.html`, replace the `src` URL of the `<iframe>` with your Google Maps embed code.
