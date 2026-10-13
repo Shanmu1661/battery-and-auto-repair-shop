@@ -1551,5 +1551,353 @@ html.dark .drawer-preference-bar .theme-toggle-btn {
   color: #f59e0b;
 }
 
+/* --------------------------------------------------------------------------
+   21. Mobile Card Sections Center Alignment (< 768px / Mobile View)
+   Ensures all card section details across all pages are centrally aligned
+   in mobile viewports.
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  /* 1. Base card container text centering */
+  .brand-card,
+  .blog-post-card,
+  main section:not(footer) .grid:not(.gap-12):not(.gap-10) > div:not([class*="col-span-"]):not(form),
+  main section:not(footer) .grid > div[class*="rounded-2xl"]:not([class*="col-span-"]):not(form),
+  main section:not(footer) .grid > div[class*="rounded-xl"]:not([class*="col-span-"]):not(form),
+  main section:not(footer) .grid > article:not([class*="col-span-"]),
+  main section:not(footer) .grid > a[class*="rounded"]:not([class*="col-span-"]),
+  main aside > div[class*="rounded-2xl"],
+  main .lg\:col-span-4 > div[class*="rounded-2xl"]:not(:has(form)),
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) {
+    text-align: center !important;
+  }
 
+  /* 2. Headings & titles inside cards */
+  .brand-card h1, .brand-card h2, .brand-card h3, .brand-card h4, .brand-card h5, .brand-card h6,
+  .blog-post-card h1, .blog-post-card h2, .blog-post-card h3, .blog-post-card h4, .blog-post-card h5, .blog-post-card h6,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h1,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h2,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h3,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h4,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h5,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) h6,
+  main section:not(footer) .grid > article h1,
+  main section:not(footer) .grid > article h2,
+  main section:not(footer) .grid > article h3,
+  main section:not(footer) .grid > article h4,
+  main section:not(footer) .grid > article h5,
+  main section:not(footer) .grid > article h6,
+  main aside > div[class*="rounded-2xl"] h1,
+  main aside > div[class*="rounded-2xl"] h2,
+  main aside > div[class*="rounded-2xl"] h3,
+  main aside > div[class*="rounded-2xl"] h4,
+  main aside > div[class*="rounded-2xl"] h5,
+  main aside > div[class*="rounded-2xl"] h6,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h1,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h2,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h3,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h4,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h5,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h6 {
+    text-align: center !important;
+  }
 
+  /* 3. Paragraphs & descriptions inside cards */
+  .brand-card p,
+  .blog-post-card p,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) p,
+  main section:not(footer) .grid > article p,
+  main aside > div[class*="rounded-2xl"] p,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) p {
+    text-align: center !important;
+  }
+
+  /* 4. Subtitles, labels, tags, badges, and spans inside cards */
+  .brand-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  .blog-post-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > article span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main aside > div[class*="rounded-2xl"] span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands) {
+    text-align: center !important;
+  }
+
+  /* 5. Icon containers & standalone badges */
+  .brand-card [class*="w-10"],
+  .brand-card [class*="w-12"],
+  .brand-card [class*="w-14"],
+  .blog-post-card [class*="w-10"],
+  .blog-post-card [class*="w-12"],
+  .blog-post-card [class*="w-14"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-8"][class*="h-8"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-10"][class*="h-10"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-11"][class*="h-11"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-12"][class*="h-12"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-14"][class*="h-14"],
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) [class*="w-16"][class*="h-16"],
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) [class*="w-10"],
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) [class*="w-12"],
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) [class*="w-14"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 6. Icon + Title rows inside cards */
+  main section:not(footer) .grid > div[class*="rounded"] > div > .flex.items-center.gap-3:not(.border-t):not(.border-b),
+  main section:not(footer) .grid > div[class*="rounded"] > .flex.items-center.gap-3:not(.border-t):not(.border-b),
+  main section:not(footer) .grid > div[class*="rounded"] > div > .flex.items-center.gap-2:not(.border-t):not(.border-b):has(> [class*="w-1"]),
+  main section:not(footer) .grid > div[class*="rounded"] > div > .flex.items-center.gap-2:not(.border-t):not(.border-b):has(> [class*="w-8"]) {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+  }
+
+  /* 7. Category badges and meta rows (inline icon + text) */
+  main section:not(footer) .grid > div[class*="rounded"] .flex.items-center.text-xs:not(.border-t):not(.border-b),
+  main section:not(footer) .grid > div[class*="rounded"] .flex.items-center.text-\[11px\]:not(.border-t):not(.border-b),
+  .blog-post-card .flex.items-center.text-\[11px\] {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 8. Feature lists and bullet points */
+  .brand-card ul li,
+  .brand-card ol li,
+  .blog-post-card ul li,
+  .blog-post-card ol li,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-1\.5 > div,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-2 > div,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 > div,
+  .border-t.space-y-2 > div.flex.items-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* 9. Brand specification rows */
+  .brand-card .space-y-2 > .flex.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] .space-y-2 > .flex.justify-between {
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* 10. Price displays */
+  main section:not(footer) .grid > div[class*="rounded"] .flex.items-baseline,
+  main section:not(footer) .grid > div[class*="rounded"] [class*="text-4xl"].font-mono,
+  main section:not(footer) .grid > div[class*="rounded"] [class*="text-5xl"].font-mono {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 11. Customer review stars */
+  main section:not(footer) .grid > div[class*="rounded"] div.flex.text-amber-400,
+  main section:not(footer) .grid > div[class*="rounded"] div.flex.text-amber-500,
+  main section:not(footer) .grid > div[class*="rounded"] div.flex:has(> .fa-star),
+  main section:not(footer) .grid > div[class*="rounded"] div.flex:has(> i.fa-star) {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 12. Review author profile footer */
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img.rounded-full),
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img[class*="rounded-full"]),
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex.items-center.gap-3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+  }
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img.rounded-full) img,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img[class*="rounded-full"]) img,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex.items-center.gap-3 img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img.rounded-full) div,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex:has(img[class*="rounded-full"]) div,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t.flex.items-center.gap-3 div {
+    text-align: center !important;
+  }
+
+  /* 13. Card footers with price & CTA links */
+  main section:not(footer) .grid > div[class*="rounded"] > .border-t.flex.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] > .border-t.flex.items-center.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] > div[class*="border-t"][class*="justify-between"],
+  .blog-post-card > .border-t.flex.justify-between,
+  .blog-post-card > .border-t.flex.items-center.justify-between,
+  .blog-post-card > div[class*="border-t"][class*="justify-between"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.625rem !important;
+  }
+  main section:not(footer) .grid > div[class*="rounded"] > .border-t.flex.justify-between > *,
+  main section:not(footer) .grid > div[class*="rounded"] > .border-t.flex.items-center.justify-between > *,
+  .blog-post-card > .border-t.flex.justify-between > *,
+  .blog-post-card > .border-t.flex.items-center.justify-between > * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  main section:not(footer) .grid > div[class*="rounded"] div[class*="border-t"] .flex.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] div[class*="border-t"] .flex.items-center.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t > .flex.justify-between,
+  main section:not(footer) .grid > div[class*="rounded"] .border-t > .flex.items-center.justify-between {
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* 14. Brand card top bar and brand logos */
+  .brand-card .border-b.flex,
+  .brand-card > div > .flex.justify-between:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.625rem !important;
+  }
+  .brand-card .border-b.flex img,
+  .brand-card > div > .flex.justify-between:first-child img,
+  main section:not(footer) .grid > div[class*="rounded"] img[src*="brands/"],
+  main section:not(footer) .grid > a[class*="rounded"] img[src*="brands/"],
+  main section:not(footer) .grid > div[class*="rounded"] a[href*="brands.html"] img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  /* 15. Milestone card top bar */
+  main section:not(footer) .grid > div[class*="rounded"]:has(.font-mono) > .flex.justify-between:first-child,
+  main section:not(footer) .grid > div[class*="rounded"]:has(.font-mono) > .flex.items-center.justify-between:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.35rem !important;
+  }
+
+  /* 16. Hero key guarantee badges */
+  .hero-banner-section .grid > div.rounded-xl {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.35rem !important;
+  }
+  .hero-banner-section .grid > div.rounded-xl i {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .hero-banner-section .grid > div.rounded-xl div {
+    text-align: center !important;
+  }
+
+  /* 17. Why Choose Us advantages list */
+  section .space-y-4 > .flex.items-start {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+  }
+  section .space-y-4 > .flex.items-start > div:first-child {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  section .space-y-4 > .flex.items-start > div:last-child {
+    text-align: center !important;
+  }
+
+  /* 18. Callout cards */
+  div[class*="rounded-2xl"].bg-amber-500\/5 {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  div[class*="rounded-2xl"].bg-amber-500\/5 > .flex.items-center {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  div[class*="rounded-2xl"].bg-amber-500\/5 .w-12.h-12 {
+    margin: 0 auto 0.5rem auto !important;
+  }
+  div[class*="rounded-2xl"].bg-amber-500\/5 .flex.flex-wrap {
+    justify-content: center !important;
+  }
+
+  /* 19. Section headers above card sections */
+  section > div > .flex.flex-col.md\:flex-row.items-center.justify-between,
+  section > div > .flex.flex-col.sm\:flex-row.justify-between {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  section > div > .flex.flex-col.md\:flex-row.items-center.justify-between > div,
+  section > div > .flex.flex-col.sm\:flex-row.justify-between > div {
+    text-align: center !important;
+  }
+
+  /* 20. Action buttons inside cards */
+  main section:not(footer) .grid > div[class*="rounded"] a.inline-flex,
+  main section:not(footer) .grid > div[class*="rounded"] button:not(.estimator-check),
+  .brand-card a,
+  .blog-post-card a.font-bold {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 21. Sidebar cards & comments in detail pages */
+  main aside div[class*="rounded-2xl"] h4,
+  main aside div[class*="rounded-2xl"] p,
+  main aside div[class*="rounded-2xl"] a.flex,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) h4,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) p,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) a.flex,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) ul li a,
+  main .space-y-4 > div[class*="rounded-xl"] .flex.items-center.justify-between {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  main aside div[class*="rounded-2xl"] a.flex,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) a.flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  main aside div[class*="rounded-2xl"] a.flex img,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) a.flex img {
+    margin: 0 auto 0.5rem auto !important;
+  }
+  main aside div[class*="rounded-2xl"] a.flex div,
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) a.flex div {
+    text-align: center !important;
+  }
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) ul li a.flex.justify-between {
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+  }
+
+  /* 22. In-card badges, guarantees & pill cards */
+  main section:not(footer) .grid > div[class*="rounded"] span.badge,
+  main section:not(footer) .grid > div[class*="rounded"] .inline-block {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
