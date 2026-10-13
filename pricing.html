@@ -413,23 +413,59 @@
 
       </div>
 
-      <!-- Payment Gateway Integration Callout for Buyers -->
-      <div class="mt-12 p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl shrink-0">
-            <i class="fa-solid fa-lock"></i>
+      <!-- Secure Online Booking & Payment Protection Callout -->
+      <div class="mt-14 rounded-2xl bg-gradient-to-br from-amber-500/[0.08] via-white to-amber-500/[0.02] dark:from-amber-500/[0.08] dark:via-slate-850 dark:to-slate-900 border border-amber-500/30 dark:border-amber-500/20 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+        
+        <!-- Top accent glow -->
+        <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-500/10 dark:bg-amber-500/5 rounded-full blur-2xl pointer-events-none"></div>
+
+        <!-- Main Card Content -->
+        <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          
+          <!-- Info Column: Icon + Title + Description -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center text-center sm:text-left rtl:sm:text-right gap-4 flex-1">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 dark:from-amber-500/25 dark:to-amber-600/15 text-amber-500 border border-amber-500/30 flex items-center justify-center text-2xl shrink-0 shadow-sm mx-auto sm:mx-0">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center justify-center sm:justify-start rtl:sm:justify-end gap-2 mb-1.5">
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Secure Online Booking Deposit</h4>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  <i class="fa-solid fa-lock text-[10px]"></i> 256-Bit SSL Encrypted
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
+                Reserve your mobile technician dispatch or diagnostic slot with an instant, encrypted digital deposit. 100% credited toward your final repair invoice.
+              </p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-base font-bold text-slate-900 dark:text-white">Secure Online Booking Deposit (Stripe &amp; PayPal Ready)</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Commercial placeholder checkout integration included. Easily wire up your Stripe Checkout links, Payment Intents, or PayPal Smart Buttons SDK.</p>
+
+          <!-- Payment Badges (Clean 2x2 grid on mobile, row on larger viewports) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto shrink-0">
+            <span class="payment-badge"><i class="fa-brands fa-stripe text-2xl text-[#635BFF]"></i> <span>Stripe</span></span>
+            <span class="payment-badge"><i class="fa-brands fa-paypal text-base text-[#0079C1]"></i> <span>PayPal</span></span>
+            <span class="payment-badge"><i class="fa-brands fa-apple text-lg text-slate-900 dark:text-white"></i> <span>Apple Pay</span></span>
+            <span class="payment-badge"><i class="fa-brands fa-google text-xs text-slate-900 dark:text-white"></i> <span>Google Pay</span></span>
+          </div>
+
+        </div>
+
+        <!-- Trust & Guarantee Footer Strip -->
+        <div class="mt-5 pt-4 border-t border-amber-500/20 dark:border-amber-500/15 flex flex-wrap items-center justify-center sm:justify-between gap-y-2 gap-x-6 text-xs text-slate-500 dark:text-slate-400 relative z-10">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+            <span>Zero Hidden Surcharges</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+            <span>100% Credited to Final Bill</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+            <span>Instant Booking Confirmation</span>
           </div>
         </div>
-        <div class="flex flex-wrap items-center gap-2 shrink-0">
-          <span class="payment-badge"><i class="fa-brands fa-stripe text-xl text-indigo-500"></i> Stripe</span>
-          <span class="payment-badge"><i class="fa-brands fa-paypal text-base text-blue-600"></i> PayPal</span>
-          <span class="payment-badge"><i class="fa-brands fa-apple-pay text-2xl text-slate-900 dark:text-white"></i> Pay</span>
-          <span class="payment-badge"><i class="fa-brands fa-google-pay text-2xl text-slate-900 dark:text-white"></i> Pay</span>
-        </div>
+
       </div>
 
     </div>

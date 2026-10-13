@@ -898,24 +898,31 @@ textarea.is-valid {
 .payment-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
+  padding: 0.625rem 1rem;
+  border-radius: 0.75rem;
   border: 1px solid #e2e8f0;
   background-color: #ffffff;
+  color: #1e293b;
   font-weight: 600;
-  font-size: 0.875rem;
-  transition: var(--transition);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
 }
 
 .dark .payment-badge {
   border-color: #334155;
   background-color: #1e293b;
   color: #f1f5f9;
+  box-shadow: none;
 }
 
 .payment-badge:hover {
-  border-color: var(--primary);
+  border-color: var(--primary, #f59e0b);
+  box-shadow: 0 4px 10px -1px rgba(245, 158, 11, 0.15);
   transform: translateY(-1px);
 }
 
@@ -1611,13 +1618,13 @@ html.dark .drawer-preference-bar .theme-toggle-btn {
     text-align: center !important;
   }
 
-  /* 4. Subtitles, labels, tags, badges, and spans inside cards */
-  .brand-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
-  .blog-post-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
-  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
-  main section:not(footer) .grid > article span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
-  main aside > div[class*="rounded-2xl"] span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
-  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands) {
+  /* 4. Subtitles, labels, tags, badges, and spans inside cards (excluding list items) */
+  .brand-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *),
+  .blog-post-card span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *),
+  main section:not(footer) .grid > article span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *),
+  main aside > div[class*="rounded-2xl"] span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *),
+  main .lg\:col-span-4 div[class*="rounded-2xl"]:not(:has(form)) span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(li span):not(li *) {
     text-align: center !important;
   }
 
@@ -1661,7 +1668,26 @@ html.dark .drawer-preference-bar .theme-toggle-btn {
     text-align: center !important;
   }
 
-  /* 8. Feature lists and bullet points */
+  /* 8. Feature lists and bullet points (Centered list container with vertically aligned tick marks & start-aligned text) */
+  .brand-card ul,
+  .brand-card ol,
+  .blog-post-card ul,
+  .blog-post-card ol,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-1\.5,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-2,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: start !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+  }
+
   .brand-card ul li,
   .brand-card ol li,
   .blog-post-card ul li,
@@ -1673,9 +1699,64 @@ html.dark .drawer-preference-bar .theme-toggle-btn {
   main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 > div,
   .border-t.space-y-2 > div.flex.items-center {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: start !important;
+    gap: 0.625rem !important;
+    width: 100% !important;
+  }
+
+  .brand-card ul li i,
+  .brand-card ol li i,
+  .blog-post-card ul li i,
+  .blog-post-card ol li i,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li i,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li i,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-1\.5 > div i,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-2 > div i,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 > div i,
+  .border-t.space-y-2 > div.flex.items-center i {
+    flex-shrink: 0 !important;
+    width: 1rem !important;
     text-align: center !important;
+    margin-top: 0.15rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .brand-card ul li span,
+  .brand-card ol li span,
+  .blog-post-card ul li span,
+  .blog-post-card ol li span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-1\.5 > div span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-1\.5 > div span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-2 > div span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-2 > div span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 > div span,
+  main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) .space-y-3 > div span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  main section:not(footer) .grid div[class*="rounded"] ul li span,
+  main section:not(footer) .grid div[class*="rounded"] ol li span,
+  main section:not(footer) .grid ul li span,
+  main section:not(footer) .grid ol li span,
+  main section:not(footer) .grid ul li,
+  main section:not(footer) .grid ol li {
+    text-align: start !important;
+    flex: 1 1 auto !important;
+  }
+
+  html[dir="rtl"] .brand-card ul li span,
+  html[dir="rtl"] .blog-post-card ul li span,
+  html[dir="rtl"] main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li span,
+  html[dir="rtl"] main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ul li span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  html[dir="rtl"] main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li span,
+  html[dir="rtl"] main section:not(footer) .grid > div[class*="rounded"]:not([class*="col-span-"]):not(form) ol li span:not(.absolute):not(.fa-solid):not(.fa-regular):not(.fa-brands),
+  html[dir="rtl"] main section:not(footer) .grid ul li span,
+  html[dir="rtl"] main section:not(footer) .grid ol li span {
+    text-align: right !important;
   }
 
   /* 9. Brand specification rows */
@@ -1899,5 +1980,26 @@ html.dark .drawer-preference-bar .theme-toggle-btn {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  /* 23. Hero Estimator Badge (Instant Diagnostic Quote) */
+  .estimator-quote-badge,
+  .hero-banner-section .lg\:col-span-5 > div > .absolute.-top-3\.5,
+  .hero-banner-section [class*="col-span"] > div > .absolute.-top-3\.5 {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* RTL Desktop placement for Hero Estimator Quote Badge */
+@media (min-width: 1024px) {
+  html[dir="rtl"] .estimator-quote-badge,
+  html[dir="rtl"] .hero-banner-section .lg\:col-span-5 > div > .absolute.-top-3\.5 {
+    left: 1.5rem !important;
+    right: auto !important;
+    transform: none !important;
   }
 }
