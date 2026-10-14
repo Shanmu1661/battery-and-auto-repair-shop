@@ -239,9 +239,6 @@ html.dark header .header-action-group {
     font-size: 0.75rem !important;
   }
 
-  header .rtl-toggle-btn .fa-globe {
-    font-size: 0.8125rem !important;
-  }
 
   header .rtl-toggle-btn .fa-right-left {
     display: none !important; /* Hide secondary indicator icon to save space at 1024px */
@@ -310,10 +307,6 @@ html.dark header #mobile-menu-open:hover {
   box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
 }
 
-header .rtl-toggle-btn i.fa-globe,
-.drawer-preference-bar .rtl-toggle-btn i.fa-globe {
-  color: #f59e0b !important;
-}
 
 header .rtl-toggle-btn i.fa-right-left,
 .drawer-preference-bar .rtl-toggle-btn i.fa-right-left {
