@@ -104,31 +104,61 @@ html.dark header {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
 }
 
+/* Desktop Navigation Links */
+header nav a,
+header nav .dropdown-group > button {
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s ease;
+  background: transparent !important;
+}
+
+header nav a:hover,
+header nav .dropdown-group > button:hover {
+  color: #f59e0b !important;
+  background: transparent !important;
+}
+
 /* Desktop Navigation Links in Dark Mode */
 html.dark header nav a,
 html.dark header nav button {
-  color: #f1f5f9 !important;
+  color: #cbd5e1 !important;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
+  background: transparent !important;
 }
 
 html.dark header nav a:hover,
 html.dark header nav button:hover {
   color: #fbbf24 !important; /* amber-400 */
-  background-color: rgba(255, 255, 255, 0.08) !important;
+  background: transparent !important;
 }
 
-/* Active navigation link in dark mode */
+/* Active navigation link */
+header nav a.nav-active,
+header nav button.nav-active,
+header nav a.text-amber-500,
+header nav button.text-amber-500,
+header nav a.font-bold,
+header nav button.font-bold {
+  color: #f59e0b !important;
+  font-weight: 700 !important;
+  background: transparent !important;
+}
+
+html.dark header nav a.nav-active,
+html.dark header nav button.nav-active,
+html.dark header nav a.text-amber-500,
+html.dark header nav button.text-amber-500,
 html.dark header nav a.font-bold,
-html.dark header nav button.font-bold,
-html.dark header nav a.text-amber-600,
-html.dark header nav button.text-amber-600 {
+html.dark header nav button.font-bold {
   color: #fbbf24 !important;
-  background-color: rgba(245, 158, 11, 0.12) !important;
+  font-weight: 700 !important;
+  background: transparent !important;
 }
 
 /* ==========================================================================
-   Header Action Buttons & Dark Mode Alignment (Theme, RTL, CTA)
+   Header Action Buttons & Alignment (Theme, RTL, CTA)
    ========================================================================== */
 
 /* Maintain uniform height and corner radius for all header action buttons */
@@ -150,8 +180,56 @@ header #mobile-menu-open {
 }
 
 header .rtl-toggle-btn {
-  padding-left: 0.875rem !important;
-  padding-right: 0.875rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  gap: 0.5rem !important;
+}
+
+/* Header buttons in light mode matching reference design */
+header .rtl-toggle-btn,
+header .theme-toggle-btn,
+header #mobile-menu-open {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+header .rtl-toggle-btn:hover,
+header .theme-toggle-btn:hover,
+header #mobile-menu-open:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+header .rtl-toggle-btn i.fa-right-left {
+  color: #f59e0b !important;
+  font-size: 0.875rem !important;
+}
+
+header .theme-toggle-btn .theme-icon,
+header .theme-toggle-btn i {
+  color: #f59e0b !important;
+  font-size: 0.95rem !important;
+}
+
+header a[href*="contact.html#booking"] {
+  background-color: #f59e0b !important;
+  color: #020617 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+header a[href*="contact.html#booking"]:hover {
+  background-color: #fbbf24 !important;
+  color: #020617 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+}
+
+header a[href*="contact.html#booking"] i {
+  color: #020617 !important;
 }
 
 /* Ensure proper right-side padding in dark mode header */
@@ -165,40 +243,27 @@ html.dark header .header-action-group {
 }
 
 /* --------------------------------------------------------------------------
-   Responsive Header Optimization (1024px - 1279px lg breakpoint & 1280px - 1399px)
-   Prevents desktop nav links and Book a Service CTA from clipping or overflowing
+   Responsive Header Optimization (1024px - 1279px lg breakpoint)
+   Maintains full button heights, brand logo, and optimal link spacing
    -------------------------------------------------------------------------- */
 @media (min-width: 1024px) and (max-width: 1279.98px) {
   header > div,
   html.dark header > div {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
   }
 
   header > div > div {
-    gap: 0.5rem !important;
+    gap: 0.75rem !important;
   }
 
-  /* Compact Brand Logo */
   header a[href="index.html"] {
-    gap: 0.5rem !important;
+    gap: 0.65rem !important;
   }
 
-  header a[href="index.html"] > div:first-child {
-    width: 2.25rem !important;
-    height: 2.25rem !important;
-    font-size: 1rem !important;
-    border-radius: 0.625rem !important;
-  }
-
-  header a[href="index.html"] span.text-2xl {
-    font-size: 1.25rem !important;
-    line-height: 1.5rem !important;
-  }
-
-  /* Compact Desktop Navigation Links */
+  /* Desktop Navigation Links */
   header nav {
-    gap: 0.15rem !important;
+    gap: 0.75rem !important;
     padding-left: 0.25rem !important;
     padding-right: 0.25rem !important;
     margin-left: auto !important;
@@ -209,84 +274,31 @@ html.dark header .header-action-group {
 
   header nav a,
   header nav .dropdown-group > button {
-    padding-left: 0.45rem !important;
-    padding-right: 0.45rem !important;
-    padding-top: 0.35rem !important;
-    padding-bottom: 0.35rem !important;
-    font-size: 0.8125rem !important; /* 13px */
-    font-weight: 600 !important;
-    letter-spacing: -0.01em !important;
-    gap: 0.25rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.875rem !important;
+    gap: 0.35rem !important;
   }
 
-  /* Compact Action Buttons */
+  /* Compact Action Buttons maintain full height and corner radius */
   header .header-action-group,
   html.dark header .header-action-group {
-    gap: 0.375rem !important;
+    gap: 0.625rem !important;
     flex-shrink: 0 !important;
   }
 
   header .rtl-toggle-btn {
-    height: 2.25rem !important; /* 36px */
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    gap: 0.35rem !important;
-    font-size: 0.75rem !important;
-    border-radius: 0.625rem !important;
-  }
-
-  header .rtl-toggle-btn .rtl-label {
-    font-size: 0.75rem !important;
-  }
-
-
-  header .rtl-toggle-btn .fa-right-left {
-    display: inline-block !important;
-    font-size: 0.75rem !important;
-  }
-
-  header .theme-toggle-btn {
-    width: 2.25rem !important;
-    min-width: 2.25rem !important;
-    height: 2.25rem !important;
-    border-radius: 0.625rem !important;
-  }
-
-  header .theme-toggle-btn i {
+    padding-left: 0.875rem !important;
+    padding-right: 0.875rem !important;
+    gap: 0.4rem !important;
     font-size: 0.8125rem !important;
   }
 
-  /* Book a Service CTA Button */
-  header .header-action-group a,
   header a[href*="contact.html#booking"] {
-    height: 2.25rem !important; /* 36px */
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-    font-size: 0.75rem !important;
-    gap: 0.35rem !important;
-    border-radius: 0.625rem !important;
-    white-space: nowrap !important;
-  }
-
-  header .header-action-group a i,
-  header a[href*="contact.html#booking"] i {
-    font-size: 0.75rem !important;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1399.98px) {
-  header > div,
-  html.dark header > div {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-  header nav {
-    gap: 0.4rem !important;
-  }
-  header nav a,
-  header nav .dropdown-group > button {
-    padding-left: 0.6rem !important;
-    padding-right: 0.6rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.875rem !important;
+    gap: 0.45rem !important;
   }
 }
 
