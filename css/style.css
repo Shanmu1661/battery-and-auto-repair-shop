@@ -950,28 +950,34 @@ textarea.is-valid {
 }
 
 /* --------------------------------------------------------------------------
-   14. Page Hero & Breadcrumb Banners
+   14. Page Hero & Breadcrumb Banners (Enhanced Ultra-High Contrast & Legibility)
    -------------------------------------------------------------------------- */
 .page-banner-section {
   position: relative;
-  background-color: #0f172a;
+  background-color: #0b0f19;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   isolation: isolate;
+  overflow: hidden;
 }
 
+/* Multi-layered cinematic dark overlay: optimal balance of workshop visibility and crystal-clear text contrast */
 .page-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.38) 50%, rgba(15, 23, 42, 0.68) 100%);
+  background: 
+    linear-gradient(180deg, rgba(11, 15, 25, 0.78) 0%, rgba(11, 15, 25, 0.58) 40%, rgba(11, 15, 25, 0.62) 60%, rgba(11, 15, 25, 0.85) 100%),
+    radial-gradient(ellipse at 50% 50%, rgba(11, 15, 25, 0.35) 0%, rgba(11, 15, 25, 0.75) 100%);
   z-index: 1;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
 
 .page-banner-grid-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.05;
   pointer-events: none;
   background-image: radial-gradient(#f59e0b 1px, transparent 1px);
   background-size: 24px 24px;
@@ -983,33 +989,181 @@ textarea.is-valid {
   z-index: 10;
 }
 
+/* Ambient soft halo behind banner content for pristine readability without obscuring the background */
+.page-banner-content::before {
+  content: '';
+  position: absolute;
+  inset: -24px -36px;
+  background: radial-gradient(ellipse at center, rgba(11, 15, 25, 0.55) 0%, rgba(11, 15, 25, 0.25) 55%, transparent 75%);
+  border-radius: 2.5rem;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+/* Enhanced Category Badges in Banner */
+.page-banner-content > span.inline-flex,
+.page-banner-content > div > span.inline-flex,
+.page-banner-content .space-y-6 > div.inline-flex,
+.page-banner-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.45rem 1.35rem !important;
+  background: rgba(11, 15, 25, 0.92) !important;
+  border: 1px solid rgba(245, 158, 11, 0.55) !important;
+  color: #fef08a !important; /* High-contrast golden amber */
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  border-radius: 9999px !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.75),
+    0 0 18px rgba(245, 158, 11, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9) !important;
+  margin-bottom: 1.15rem !important;
+  transition: all 0.25s ease;
+}
+
+.page-banner-content > span.inline-flex:hover,
+.page-banner-badge:hover {
+  border-color: rgba(245, 158, 11, 0.85) !important;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(245, 158, 11, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+/* Color variations for badges */
+.page-banner-content span.inline-flex[class*="sky"],
+.page-banner-content div.inline-flex[class*="sky"] {
+  border-color: rgba(56, 189, 248, 0.55) !important;
+  color: #bae6fd !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.75),
+    0 0 18px rgba(14, 165, 233, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Enhanced Main Heading */
 .page-banner-content h1 {
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 4px 25px rgba(0, 0, 0, 0.7);
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.18 !important;
+  margin-bottom: 1.15rem !important;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.95),
+    0 6px 18px rgba(0, 0, 0, 0.85),
+    0 16px 36px rgba(0, 0, 0, 0.8) !important;
 }
 
+.page-banner-content h1 .text-amber-400,
+.page-banner-content h1 .text-amber-500,
+.page-banner-content h1 span[class*="amber"]:not([class*="gradient"]) {
+  color: #fbbf24 !important;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.95),
+    0 6px 16px rgba(0, 0, 0, 0.85),
+    0 0 25px rgba(245, 158, 11, 0.45) !important;
+}
+
+.page-banner-content h1 .bg-clip-text {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.9)) !important;
+}
+
+/* Enhanced Subtitle Paragraph */
 .page-banner-content p {
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+  color: #f1f5f9 !important; /* Bright high-contrast slate-100 */
+  font-weight: 500 !important;
+  font-size: 1.0625rem !important;
+  line-height: 1.75 !important;
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.95),
+    0 3px 10px rgba(0, 0, 0, 0.9),
+    0 8px 20px rgba(0, 0, 0, 0.8) !important;
+  margin-bottom: 1.6rem !important;
 }
 
-/* Prevent text-shadow from ruining buttons, links, forms, inputs, and interactive widgets */
-.page-banner-content a,
-.page-banner-content button,
-.page-banner-content a *,
-.page-banner-content button *,
+/* Enhanced Breadcrumb Navigation Pill */
+.page-banner-content div.inline-flex.rounded-full,
+.page-banner-content .breadcrumb-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.65rem !important;
+  background: rgba(11, 15, 25, 0.90) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 
+    0 4px 18px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 0.45rem 1.35rem !important;
+  border-radius: 9999px !important;
+  transition: all 0.25s ease;
+}
+
+.page-banner-content div.inline-flex.rounded-full:hover,
+.page-banner-content .breadcrumb-pill:hover {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  box-shadow: 
+    0 6px 22px rgba(0, 0, 0, 0.8),
+    0 0 18px rgba(245, 158, 11, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18) !important;
+}
+
+.page-banner-content div.inline-flex.rounded-full a {
+  color: #cbd5e1 !important;
+  font-weight: 600 !important;
+  font-size: 0.8125rem !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.page-banner-content div.inline-flex.rounded-full a:hover {
+  color: #fbbf24 !important;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.6) !important;
+}
+
+.page-banner-content div.inline-flex.rounded-full i {
+  color: #94a3b8 !important;
+  font-size: 0.65rem !important;
+}
+
+.page-banner-content div.inline-flex.rounded-full span {
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 12px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Maintain crisp button & form styling inside page-banner-content */
+.page-banner-content a.bg-amber-500,
+.page-banner-content a[class*="bg-amber"],
+.page-banner-content button.bg-amber-500,
+.page-banner-content button[class*="bg-amber"],
+.page-banner-content .btn-primary {
+  color: #020617 !important;
+  text-shadow: none !important;
+}
+
 .page-banner-content input,
 .page-banner-content select,
 .page-banner-content label,
-.page-banner-content form,
-.page-banner-content .badge,
-a[class*="bg-amber"],
-button[class*="bg-amber"] {
+.page-banner-content form {
   text-shadow: none !important;
 }
 
 /* Prevent text-shadow from ruining bg-clip-text gradient text */
 .bg-clip-text,
 [class*="bg-clip-text"] {
-  text-shadow: none !important;
   -webkit-text-fill-color: transparent;
 }
 
