@@ -99,6 +99,12 @@ function applyDirection(dir) {
   rtlLabels.forEach(label => {
     label.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
   });
+
+  const rtlToggles = document.querySelectorAll('.rtl-toggle-btn');
+  rtlToggles.forEach(btn => {
+    btn.setAttribute('title', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
+    btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
+  });
 }
 
 /* ==========================================================================
